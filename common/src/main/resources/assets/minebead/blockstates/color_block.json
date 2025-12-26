@@ -1,5 +1,20 @@
 {
   "variants": {
-    "": { "model": "minebead:block/color_block" }
+    "map_dye=white":  { "model": "minebead:block/color_block" },
+    "map_dye=orange": { "model": "minebead:block/color_block" },
+    "map_dye=magenta":{ "model": "minebead:block/color_block" },
+    "map_dye=light_blue":{ "model": "minebead:block/color_block" },
+    "map_dye=yellow": { "model": "minebead:block/color_block" },
+    "map_dye=lime":   { "model": "minebead:block/color_block" },
+    "map_dye=pink":   { "model": "minebead:block/color_block" },
+    "map_dye=gray":   { "model": "minebead:block/color_block" },
+    "map_dye=light_gray":{ "model": "minebead:block/color_block" },
+    "map_dye=cyan":   { "model": "minebead:block/color_block" },
+    "map_dye=purple": { "model": "minebead:block/color_block" },
+    "map_dye=blue":   { "model": "minebead:block/color_block" },
+    "map_dye=brown":  { "model": "minebead:block/color_block" },
+    "map_dye=green":  { "model": "minebead:block/color_block" },
+    "map_dye=red":    { "model": "minebead:block/color_block" },
+    "map_dye=black":  { "model": "minebead:block/color_block" }
   }
 }

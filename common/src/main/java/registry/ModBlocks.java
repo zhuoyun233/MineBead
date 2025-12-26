@@ -4,6 +4,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import gg.bluechair.minebead.Block.ColorBlock;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -17,7 +18,7 @@ public class ModBlocks {
     // 预注册方块
     public static final RegistrySupplier<Block> COLOR_BLOCK = BLOCKS.register(
             "color_block",
-            () -> new ColorBlock(BlockBehaviour.Properties.of().strength(50.0F, 3600000.0F))
+            () -> new ColorBlock(BlockBehaviour.Properties.of().strength(50.0F, 3600000.0F).mapColor(state -> state.getValue(ColorBlock.MAP_DYE).getMapColor()))
     );
 
 
