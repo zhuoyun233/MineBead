@@ -83,4 +83,16 @@ public class ColorBlock extends Block implements EntityBlock {
         return 0.002F; // 非常慢
     }
 
+    @Override
+    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+        ItemStack stack = super.getCloneItemStack(level, pos, state);
+
+        var be = level.getBlockEntity(pos);
+        if (be instanceof ColorBlockEntity colorBE) {
+            ColorNbt.setColor(stack, colorBE.getColor());
+        }
+
+        return stack;
+    }
+
 }
