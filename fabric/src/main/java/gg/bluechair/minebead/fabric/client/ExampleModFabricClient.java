@@ -12,6 +12,7 @@ public final class ExampleModFabricClient implements ClientModInitializer {
     public void onInitializeClient() {
         // This entrypoint is suitable for setting up client-specific logic, such as rendering.
         System.out.println("[MineBead] Fabric client entrypoint called!");
+        FabricSelectionPreviewRenderer.init();
         // 方块（世界中）
         ColorProviderRegistry.BLOCK.register(
                 (state, world, pos, tintIndex) -> {
