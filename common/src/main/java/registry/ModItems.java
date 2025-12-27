@@ -2,6 +2,7 @@ package registry;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import gg.bluechair.minebead.item.BeadToolboxItem;
 import gg.bluechair.minebead.item.ColorBlockItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -25,6 +26,12 @@ public class ModItems {
             () -> new ColorBlockItem(ModBlocks.COLOR_BLOCK.get(), new Item.Properties())
     );
 
+    // 拼豆工具箱
+    public static final RegistrySupplier<Item> BEAD_TOOLBOX_ITEM = ITEMS.register(
+            "bead_toolbox",
+            () -> new BeadToolboxItem(ModBlocks.BEAD_TOOLBOX.get(), new Item.Properties().stacksTo(1))
+    );
+
     // 你的第一个物品：example_item
     public static final RegistrySupplier<Item> EXAMPLE_ITEM = ITEMS.register(
             "example_item",
@@ -37,6 +44,7 @@ public class ModItems {
         // 把物品塞进创造模式栏（示例：工具与实用）
         CreativeTabRegistry.append(CreativeModeTabs.TOOLS_AND_UTILITIES,
                 COLOR_BLOCK_ITEM.get(),
+                BEAD_TOOLBOX_ITEM.get(),
                 EXAMPLE_ITEM.get()
         );
     }

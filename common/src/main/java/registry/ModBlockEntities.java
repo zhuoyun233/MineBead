@@ -2,6 +2,7 @@ package registry;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import gg.bluechair.minebead.BlockEntity.BeadToolboxEntity;
 import gg.bluechair.minebead.BlockEntity.ColorBlockEntity;
 import gg.bluechair.minebead.ExampleMod;
 import net.minecraft.core.registries.Registries;
@@ -17,6 +18,15 @@ public class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(
                             ColorBlockEntity::new,
                             ModBlocks.COLOR_BLOCK.get()
+                    ).build(null)
+            );
+
+    // ===== 新增：Bead Toolbox =====
+    public static final RegistrySupplier<BlockEntityType<BeadToolboxEntity>> BEAD_TOOLBOX_ENTITY =
+            BLOCK_ENTITIES.register("bead_toolbox_entity",
+                    () -> BlockEntityType.Builder.of(
+                            BeadToolboxEntity::new,
+                            ModBlocks.BEAD_TOOLBOX.get()
                     ).build(null)
             );
 
