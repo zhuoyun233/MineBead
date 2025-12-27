@@ -42,10 +42,10 @@ public class ModItems {
         ITEMS.register();
 
         // 把物品塞进创造模式栏（示例：工具与实用）
-        CreativeTabRegistry.append(CreativeModeTabs.TOOLS_AND_UTILITIES,
-                COLOR_BLOCK_ITEM.get(),
-                BEAD_TOOLBOX_ITEM.get(),
-                EXAMPLE_ITEM.get()
-        );
+        //CreativeTabRegistry.append(CreativeModeTabs.TOOLS_AND_UTILITIES,
+                //COLOR_BLOCK_ITEM.get(),
+                //BEAD_TOOLBOX_ITEM.get(),
+                //EXAMPLE_ITEM.get()
+        //);
     }
 }
