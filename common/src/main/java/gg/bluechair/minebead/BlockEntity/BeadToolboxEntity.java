@@ -7,6 +7,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.Nullable;
 import registry.ModBlockEntities;
 
 public class BeadToolboxEntity extends BlockEntity {
@@ -23,13 +24,9 @@ public class BeadToolboxEntity extends BlockEntity {
         setChanged();
     }
 
-    public ItemStack toBoundItem(ItemStack base) {
-        ItemStack out = base.copy();
-        out.setCount(1);
-        if (!boundStack.isEmpty() && boundStack.hasTag()) {
-            out.setTag(boundStack.getTag().copy());
-        }
-        return out;
+    @Nullable
+    public ItemStack getBoundStack() {
+        return boundStack.isEmpty() ? null : boundStack;
     }
 
     @Override

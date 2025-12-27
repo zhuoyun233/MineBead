@@ -25,7 +25,7 @@ public class ModBlocks {
 
     public static final RegistrySupplier<Block> BEAD_TOOLBOX = BLOCKS.register(
             "bead_toolbox",
-            () -> new BeadToolbox(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).noOcclusion())
+            () -> new BeadToolbox(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3600000.0F).noOcclusion())
     );
 
 

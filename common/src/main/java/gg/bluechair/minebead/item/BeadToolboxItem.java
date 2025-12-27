@@ -46,14 +46,6 @@ public class BeadToolboxItem extends BlockItem {
         // 允许放置走原版
         InteractionResult res = super.place(ctx);
 
-        // 绑定 BE：只在服务端做
-        if (res.consumesAction() && !level.isClientSide) {
-            var be = level.getBlockEntity(placePos);
-            if (be instanceof gg.bluechair.minebead.BlockEntity.BeadToolboxEntity toolboxBe) {
-                toolboxBe.bindFromItem(stack);
-            }
-        }
-
         return res;
     }
 
