@@ -1,4 +1,6 @@
 {
   "block.minebead.color_block": "Color Block",
-  "item.minebead.color_block.named": "%s %s"
+  "item.minebead.color_block.named": "%s %s",
+  "item.minebead.bead_toolbox": "Perler Beads Toolbox",
+  "block.minebead.bead_toolbox": "Perler Beads Toolbox"
 }
